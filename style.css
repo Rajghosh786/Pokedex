@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: border-box;
+    font-family: poppins;
+}
+h1{
+    font-family: 'Pokemon Solid';
+    font-size: 50px
+}
+.container{
+    background: linear-gradient(to right,red 50% ,white 50%);
+    background:linear-gradient(-30deg, red 50%, white 50%);
+    /* background-image:url(pokedex.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.name{
+    font-family: 'Pokemon Solid';
+    font-size: 30px;
+
+}
+.main{
+    border: 5px solid black;
+    border-radius: 30px;
+    min-height: 500px;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: orange;
+}
+.search{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchbar{
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    background-color:white;
+}
+.searchbtn{
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 10px;
+    border: 0;
+    border-radius: 20px;
+    background-color:white;
+    cursor: pointer;
+}
+/* .id{
+    padding: 10px;
+    background-color: white;
+    border-radius: 50px;
+} */
+.pokedetails{
+    text-align: center;
+}
+
+.image{
+    outline: 0;
+    border: 0;
+    height: 230px;
+    width: 230px;
+}
+.category{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: right;
+    place-items: right;
+}
+.categoryone{
+    text-align: start;
+    padding: 30px 25px;
+}
+.categorytwo{
+    text-align: start;
+    padding: 30px 25px;
+}
+
+.list{
+    list-style: none;
+}
+.divcontainer{
+    display: none;
+}
+.divcontainerunhide{
+    display: block;
+}
