@@ -124,7 +124,8 @@ function uppercase(){
     p_name.textContent = p_name.textContent.toUpperCase()
 }
 
-searchbar.addEventListener('keyup',filtering)
+searchbar.addEventListener('keyup', filtering)
+// searchbtn.addEventListener('click',filtering)
     
 function filtering() {
         fetch('https://pokeapi.co/api/v2/pokemon/?limit=1302')
@@ -141,14 +142,14 @@ function filtering() {
             mapfiltering(result)
         })
     }
-    function mapfiltering(rec){
+    function mapfiltering(result){
         const searchvalue = searchbar.value;
-        if(searchvalue === ''){
-            divcontainer.classList.remove('divcontainerunhide')
+        if(searchvalue === ""){
+           return divcontainer.classList.remove('divcontainerunhide')
         }
         divcontainer.classList.add('divcontainerunhide')
         divcontainer.innerHTML = '';
-    rec.map(e => {
+    result.map(e => {
        const list = document.createElement('li')
         list.classList.add('list')
         list.textContent = e.name  
@@ -156,12 +157,8 @@ function filtering() {
         list.addEventListener('click',function(){
             searchbar.value = list.textContent;            
             searchbtn.click();
-            divcontainer.classList.remove('divcontainerunhide')
-            
+            divcontainer.classList.remove('divcontainerunhide')          
           })        
 })
 
 }
-
-
-
