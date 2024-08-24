@@ -49,7 +49,7 @@ searchbtn.addEventListener('click',function(){
 })
 
 function fetching(){
-    const pokesearch = searchbar.value
+    const pokesearch = searchbar.value.toLowerCase();
     // console.log(pokesearch)
 	searchbar.value = ''
         fetch(`https://pokeapi.co/api/v2/pokemon/${pokesearch}`)
@@ -132,7 +132,7 @@ function filtering() {
         .then(resp => resp.json())
         .then(data => {           
             const onlynames = data.results
-            const searchvalue = searchbar.value
+            const searchvalue = searchbar.value.toLowerCase();
             let result = []
             result = onlynames.filter(e=>{
                 // console.log(e.name)
@@ -142,6 +142,7 @@ function filtering() {
             mapfiltering(result)
         })
     }
+//i was not using retrun in the below if statement so it fucked up the whole code
     function mapfiltering(result){
         const searchvalue = searchbar.value;
         if(searchvalue === ""){
